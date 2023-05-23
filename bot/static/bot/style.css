@@ -1,61 +1,81 @@
+/* style.css */
+
+/* make scrollbar transparent */
+::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
+}
+
+.container {
+  /* IE 10+ */
+  -ms-overflow-style: none;
+
+  /* Firefox */
+  scrollbar-width: none;
+}
+
+.container::-webkit-scrollbar {
+  /* Safari and Chrome */
+  display: none;
+}
+
+/* Chat bot container */
 #chatbot {
   margin-left: auto;
   margin-right: auto;
   width: 70%;
-  margin-top: 50px;
+  margin-top: 20px;
   border-radius: 10px;
-  border: 1px solid gray;
-  padding: 10px;
+  border: 1px solid #ddd;
+  background-color: #f5f5f5;
+  padding-top: 5px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Chat messages */
+.botText,
+.userText {
+  margin-bottom: 10px;
 }
 
 .botText {
-  font-family: monospace;
+  color: #333;
   font-size: 14px;
-  text-align: left;
-  line-height: 25px;
-  color: rgb(109, 111, 109);
 }
 
+.userText {
+  color: #007bff;
+  font-size: 14px;
+  text-align: right;
+}
+
+/* User input section */
 #userInput {
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 40px;
-  width: 70%;
-  text-align: center;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
 }
 
 #textInput {
-  border: 3px solid white;
-  border-bottom: 3px solid #afafaf;
-  font-family: monospace;
+  flex-grow: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
   font-size: 14px;
-  width: 60%;
-  padding: 16px;
-  color: tomato;
-}
-
-#buttonInput {
-  padding: 5px;
-  font-family: monospace;
-  font-size: 14px;
-  border: 3px solid #5b605c;
-  background-color: rgb(40, 48, 40);
-  color: white;
-  border-radius: 10px;
+  color: black;
+  font-weight: 600;
 }
 
 h1 {
   text-align: center;
-  color: rgb(57, 72, 57);
+  margin-top: 50px;
+  color: #333;
 }
 
-.chat_init {
-  font-size: 15px;
-  font-weight: bold;
-}
-
-/* loading dots */
-
+/* Loading dots animation */
 .chat_init:after {
   content: " .";
   animation: dots 1s steps(5, end) infinite;
@@ -78,12 +98,4 @@ h1 {
   100% {
     text-shadow: 0.25em 0 0 black, 0.5em 0 0 black;
   }
-}
-
-.userText {
-  text-align: right;
-  font-family: monospace;
-  font-size: 14px;
-  line-height: 25px;
-  color: rgb(109, 111, 109);
 }
