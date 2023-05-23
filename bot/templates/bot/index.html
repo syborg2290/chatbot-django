@@ -35,7 +35,11 @@
       <div>
         <div style="display: flex; justify-content: center">
           <div style="display: none" id="voice_bot">
-            <img src="{% static 'bot/voice.gif' %}" alt="voice" />
+            <img
+              src="{% static 'bot/voice.gif' %}"
+              alt="voice"
+              style="width: 200px"
+            />
           </div>
         </div>
 
@@ -105,7 +109,7 @@
             voiceBot.style.display = "block";
             setTimeout(function () {
               voiceBot.style.display = "none";
-            }, 2000);
+            }, data.length * 200);
 
             let textToSpeak = data;
 
