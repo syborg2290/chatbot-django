@@ -29,7 +29,7 @@
   <body>
     <div style="border-top: 1px solid gray; padding: 50px">
       <div style="display: flex; justify-content: center">
-        <h3 style="font-weight: bold">ChatBot App</h3>
+        <h3 style="font-weight: bold">Educational Counselor Chatbot</h3>
       </div>
 
       <div>
@@ -48,7 +48,11 @@
           style="overflow-y: scroll; scrollbar-width: thin; height: 400px"
         >
           <p class="botText">
-            <span class="chat_init">Listening</span>
+            <span
+              class="chat_init"
+              style="font-size: large; font-weight: 800; color: rgb(116, 180, 52)"
+              >Listening</span
+            >
           </p>
         </div>
 
@@ -61,15 +65,22 @@
               placeholder="Type your question."
               aria-label="Recipient's username"
               aria-describedby="button-addon2"
-              style="color: black; opacity: 0.5"
+              style="
+                color: black;
+                opacity: 0.5;
+                margin-left: 250px;
+                margin-right: 100px;
+              "
             />
           </div>
+
+          <br />
 
           <button
             type="button"
             id="buttonInput"
             class="btn btn-dark"
-            style="padding-left: 20px; padding-right: 20px"
+            style="padding-left: 5px; padding-right: 5px; border-radius: 5%"
           >
             Ask Your Question
           </button>
@@ -119,7 +130,7 @@
             speakData.pitch = 0; // From 0 to 2
             speakData.text = textToSpeak;
             speakData.lang = "en";
-            speakData.voice = getVoices()[0];
+            speakData.voice = getVoices()[2];
 
             speechSynthesis.speak(speakData);
           });

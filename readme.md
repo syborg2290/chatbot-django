@@ -2,10 +2,12 @@
 
 - python3 manage.py runserver
 
+- python3 manage.py runserver --noreload
+
+
 ### Create new app
 
 - python3 manage.py startapp bot
-
 
 ### install chatterbot and other chatbot libraries
 
